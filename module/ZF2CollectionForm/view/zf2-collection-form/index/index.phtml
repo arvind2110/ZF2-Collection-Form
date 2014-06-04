@@ -1,0 +1,43 @@
+<?php
+$form->setAttribute('action', '')->prepare();
+
+echo $this->form()->openTag($form);
+$content = $form->get('Entity1');
+?>
+
+<div class="general-form-container client-profile clearfix">
+	<h2 class="title">Zend Framework 2 Collection Form</h2>
+	<div class="form-row">
+		<div class="field-type1 float-l">
+			<label class="form-label-half"><?php echo $this->formlabel($content->get('elementName1'));?></label>
+			<div class="form-fields full-width-half">
+                   <?php echo $this->formElement($content->get('elementName1'));?>
+                   <span class="common-error-msg"><?php echo $this->formElementErrors($content->get('elementName1'));?></span>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="form-row" id="elementContainer">
+	   <?php 
+	   echo $this->formCollection($content->get('elements2'));
+	   ?>
+	</div>
+	<div class="form-row">
+	   <div class="sign-btn">
+            <?php  
+                echo $this->formElement($content->get('addElement2')); 
+            ?>
+       </div>
+	</div>
+	<div class="form-row">
+	   <div class="sign-btn">
+            <?php  
+                echo $this->formHidden($form->get('csrf')); 
+                echo $this->formElement($form->get('save'));
+            ?>
+       </div>
+	</div>
+</div>
+<?php
+echo $this->form()->closeTag();
+?>

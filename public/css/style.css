@@ -1,0 +1,89 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.container {
+	float:left;
+	width:100%;
+}
+
+.form-row{
+	float:left;
+	width:98%;
+	padding:10px;
+}
+
+.field-type1{
+	float:left;
+	width:100%;
+}
+
+.form-label-half{
+	width:100%;
+	float:left;
+}
+
+.form-fields{
+	width:100%;
+	float:left;
+}
+
+fieldset{
+	float:left;
+	width:100%;
+}
+
+fieldset label{
+	float:left;
+	width:100%;
+}
+
+fieldset label span{
+	float:left;
+	width:100%;
+}
+
+fieldset label input{
+	float:left;
+	width:auto;
+}
+
+input[type="text"] {
+	float:left;	
+	border:1px solid #CCCCCC;
+	padding:10px;
+	line-height:20px;
+}
+
+input[type="button"],input[type="submit"] {
+	float:left;	
+	border:1px solid #CCCCCC;
+	padding:10px;
+	background-color: green;
+	color:#FFFFFF;
+}
+
+input[type="submit"] {
+	float:left;	
+	border:1px solid #CCCCCC;
+	padding:10px;
+	background-color: #080808;
+	color:#FFFFFF;
+}
+
+.removeButton{
+	background-color: red !important;
+}
+
+label.error{
+	color:red;
+	font-weight:normal;
+	float:left;
+	width:100%;
+}
+
+fieldset label.required span::after,.form-label-half label.required::after{
+	content:"*";
+	color:red;
+}
